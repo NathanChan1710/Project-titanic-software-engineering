@@ -1,14 +1,20 @@
-import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
+import pandas as pd
+import os
 
-train_data = pd.read_csv("./data/raw/train.csv")
-train_data.head()
+def prepare_data(input_path, output_path):
+    """Charge un CSV et le sauvegarde dans le dossier interim."""
+    # Lecture du fichier
+    df = pd.read_csv(input_path)
+    
+    # Création du dossier de destination s'il n'existe pas
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    # Sauvegarde selon tes critères
+    df.to_csv(output_path, index=False, encoding="utf-8")
+    
+    return df
 
-test_data = pd.read_csv("./data/raw/test.csv")
-test_data.head()
-
-# on a deja fait, on a arrangé le chemin
-
-train_data.to_csv("./data/interim/train_clean.csv", index=False, encoding="utf-8")
-
-
-test_data.to_csv("./data/interim/test_clean.csv", index=False, encoding="utf-8")
+# Exécution pour tes fichiers réels
+if __name__ == "__main__":
+    prepare_data("./data/raw/train.csv", "./data/interim/train_clean.csv")
+    prepare_data("./data/raw/test.csv", "./data/interim/test_clean.csv")

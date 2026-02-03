@@ -1,19 +1,28 @@
-import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
+import pandas as pd
+import os
 
-train_data = pd.read_csv("./data/interim/train_clean.csv")
-test_data = pd.read_csv("./data/interim/test_clean.csv")
+def calculate_survival_rates(df):
+    """Logique pure : pas de lecture de fichier ici"""
+    women = df.loc[df.Sex == "female"]["Survived"]
+    rate_women = sum(women) / len(women) if len(women) > 0 else 0
 
-women = train_data.loc[train_data.Sex == "female"]["Survived"]
-rate_women = sum(women) / len(women)
+    men = df.loc[df.Sex == "male"]["Survived"]
+    rate_men = sum(men) / len(men) if len(men) > 0 else 0
+    
+    return rate_women, rate_men
 
-print("% of women who survived:", rate_women)
-
-men = train_data.loc[train_data.Sex == "male"]["Survived"]
-rate_men = sum(men) / len(men)
-
-print("% of men who survived:", rate_men)
-
-# --- Sauvegarde CSV ---
-results = pd.DataFrame({"group": ["women", "men"], "survival_rate": [rate_women, rate_men]})
-
-results.to_csv("./data/processed/survival_rates.csv", index=False)
+# CE BLOC EMPECHE L'ERREUR PENDANT LE TEST
+if __name__ == "__main__":
+    # Ce code ne s'exécute QUE si tu lances le fichier directement
+    # Utilise .. car tes données sont un dossier plus haut
+    train_data = pd.read_csv("../data/interim/train_clean.csv")
+    
+    r_women, r_men = calculate_survival_rates(train_data)
+    
+    # Sauvegarde
+    output_path = "../data/processed/survival_rates.csv"
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    results = pd.DataFrame({"group": ["women", "men"], "survival_rate": [r_women, r_men]})
+    results.to_csv(output_path, index=False)
+    print("Calcul terminé et sauvegardé.")
