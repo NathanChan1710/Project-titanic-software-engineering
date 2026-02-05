@@ -1,8 +1,19 @@
+"""
+Model d’évaluation du projet Titanic.
+
+Contient les fonctions nécessaires au calcul des
+taux de survie à partir des données.
+"""
+
 import pandas as pd
 import os
 
 def calculate_survival_rates(df):
-    """Logique pure : pas de lecture de fichier ici"""
+""" Calcule les taux de survie en fonction 
+du genre.
+
+On utilise les colonnes 'Sex' et 'Survived'"""
+
     women = df.loc[df.Sex == "female"]["Survived"]
     rate_women = sum(women) / len(women) if len(women) > 0 else 0
 
@@ -13,8 +24,6 @@ def calculate_survival_rates(df):
 
 # CE BLOC EMPECHE L'ERREUR PENDANT LE TEST
 if __name__ == "__main__":
-    # Ce code ne s'exécute QUE si tu lances le fichier directement
-    # Utilise .. car tes données sont un dossier plus haut
     train_data = pd.read_csv("../data/interim/train_clean.csv")
     
     r_women, r_men = calculate_survival_rates(train_data)
