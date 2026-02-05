@@ -3,7 +3,7 @@ Ce projet a pour objectif de mettre en œuvre de bonnes pratiques d’ingénieri
 Il s’appuie sur le jeu de données Titanic, récupéré sur Kaggle,  afin de prédire la survie des passagers à partir de leurs caractéristiques.  
 Lien Kaggle de la base de données : https://www.kaggle.com/code/alexisbcook/titanic-tutorial
 
-les objectifs sont les suivants :
+Les objectifs sont les suivants :
 - la structuration des scripts Python
 - la qualité logicielle
 - les tests unitaires
