@@ -1,9 +1,24 @@
+"""
+Model d'entraînement de notre projet Titanic.
+
+Contient les fonctions nécessaires à l'entraînement d'un 
+modèle de classification et à la génération des prédictions
+sur notre jeu de données de test.
+"""
+
 import pandas as pd
 import os
 from sklearn.ensemble import RandomForestClassifier
 
 def train_and_predict(train_df, test_df, features):
-    """Logique d'entraînement et de prédiction."""
+"""Entraîne un modèle de classification et génère des prédictions.
+Prépare les variables explicatives à l'aide de l'encodage one-hot,
+entraîne un modèle RandomForest puis génère les prédictions sur le 
+jeu de données de test.
+train_df : Jeu de données d'entraînement contenant la variable cible 
+            'Survived'.
+test_df : Jeu de données de test sans la variable cible."""
+
     y = train_df["Survived"]
     X = pd.get_dummies(train_df[features])
     X_test = pd.get_dummies(test_df[features])
