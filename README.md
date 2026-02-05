@@ -1,12 +1,18 @@
-# titanic_project
+# Titanic_project
+Ce projet a pour objectif de mettre en œuvre de bonnes pratiques d’ingénierie logicielle appliquées à un projet de data science. 
+Il s’appuie sur le jeu de données Titanic, récupéré sur Kaggle,  afin de prédire la survie des passagers à partir de leurs caractéristiques.
+Lien Kaggle de la base de données : https://www.kaggle.com/code/alexisbcook/titanic-tutorial
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
+les objectifs sont les suivants :
+- la structuration des scripts Python
+- la qualité logicielle
+- les tests unitaires
+- la documentation
+- l’utilisation de Git/GitHub et d’une pipeline CI/CD
 
-first tianic project
+## Project Organization COOKIECUTTER
 
-## Project Organization
+Pour faire la structure de notre projet nous nous sommes basés sur cet exemple :
 
 ```
 ├── LICENSE            <- Open-source license if one is chosen
