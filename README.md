@@ -66,8 +66,8 @@ Pour faire la structure de notre projet nous nous sommes basés sur cet exemple 
 --------
 👥 Équipe
 
-Nathan Chan Sing Man : Division des scripts, Vérification des codes + qualité des codes
-Manohy Ratsimba : Mise en place de la structure, Division des scripts, Tests unitaires
-Camille Franceschin : Division des scripts
+Nathan Chan Sing Man : Division des scripts, Vérification des codes + qualité des codes  
+Manohy Ratsimba : Mise en place de la structure, Division des scripts, Tests unitaires  
+Camille Franceschin : Division des scripts  
 Assia Boudjraf :
 
