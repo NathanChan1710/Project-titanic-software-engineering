@@ -64,7 +64,7 @@ Pour faire la structure de notre projet nous nous sommes basés sur cet exemple 
 ```
 
 --------
-👥 Équipe
+## Équipe - BUT3 SD VCOD groupe 33
 
 Nathan Chan Sing Man : Division des scripts, Vérification des codes + qualité des codes  
 Manohy Ratsimba : Mise en place de la structure, Division des scripts, Tests unitaires  
