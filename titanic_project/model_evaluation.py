@@ -9,12 +9,12 @@ import pandas as pd
 import os
 
 def calculate_survival_rates(df):
-""" 
-Calcule les taux de survie en fonction 
-du genre.
+    """
+    Calcule les taux de survie en fonction du genre.
 
-On utilise les colonnes 'Sex' et 'Survived'
-"""
+    On utilise les colonnes 'Sex' et 'Survived'.
+    """
+
 
     women = df.loc[df.Sex == "female"]["Survived"]
     rate_women = sum(women) / len(women) if len(women) > 0 else 0
