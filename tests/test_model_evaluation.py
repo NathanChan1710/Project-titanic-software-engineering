@@ -4,7 +4,8 @@ Tests unitaires pour le module model_evaluation.
 
 import pandas as pd
 
-from model_evaluation import calculate_survival_rates
+from titanic_project.model_evaluation import calculate_survival_rates
+
 
 
 def test_calculate_survival_rates():

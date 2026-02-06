@@ -5,7 +5,8 @@ Tests unitaires pour le module data_preprocessing.
 import os
 import pandas as pd
 
-from data_preprocessing import prepare_data
+from titanic_project.data_preprocessing import prepare_data
+
 
 
 def test_prepare_data_logic():
