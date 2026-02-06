@@ -7,7 +7,6 @@ import pandas as pd
 from titanic_project.model_evaluation import calculate_survival_rates
 
 
-
 def test_calculate_survival_rates():
     """
     Vérifie le calcul des taux de survie pour les femmes et les hommes.

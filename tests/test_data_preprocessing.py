@@ -8,7 +8,6 @@ import pandas as pd
 from titanic_project.data_preprocessing import prepare_data
 
 
-
 def test_prepare_data_logic():
     """
     Vérifie le chargement et la sauvegarde des données par prepare_data.

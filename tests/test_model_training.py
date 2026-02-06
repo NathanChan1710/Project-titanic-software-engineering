@@ -7,7 +7,6 @@ import pandas as pd
 from titanic_project.model_training import train_and_predict
 
 
-
 def test_train_and_predict_flow():
     """
     Vérifie le flux complet d'entraînement et de prédiction du modèle.
