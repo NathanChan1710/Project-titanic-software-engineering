@@ -11,15 +11,15 @@ import os
 from sklearn.ensemble import RandomForestClassifier
 
 def train_and_predict(train_df, test_df, features):
-"""
-Entraîne un modèle de classification et génère des prédictions.
-Prépare les variables explicatives à l'aide de l'encodage one-hot,
-entraîne un modèle RandomForest puis génère les prédictions sur le 
-jeu de données de test.
-train_df : Jeu de données d'entraînement contenant la variable cible 
+            """
+            Entraîne un modèle de classification et génère des prédictions.
+            Prépare les variables explicatives à l'aide de l'encodage one-hot,
+            entraîne un modèle RandomForest puis génère les prédictions sur le 
+            jeu de données de test.
+            train_df : Jeu de données d'entraînement contenant la variable cible 
             'Survived'.
-test_df : Jeu de données de test sans la variable cible.
-"""
+            test_df : Jeu de données de test sans la variable cible.
+            """
 
     y = train_df["Survived"]
     X = pd.get_dummies(train_df[features])
